@@ -1,0 +1,10 @@
+version: "3"
+services:
+  db:
+    image:  postgres:13.1
+    restart: always 
+    ports:
+      - "5430:5432"
+    environment:
+       POSTGRES_DB: task
+       POSTGRES_PASSWORD: pass123
