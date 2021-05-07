@@ -17,4 +17,9 @@ export class AuthController {
         console.log(credential);
         return this.authService.signup(credential);
     }
+
+    @Post('/signin')
+    signIn(@Body(ValidationPipe) credential: AuthCredentialDto){
+        return this.authService.signIn(credential);
+    }
 }
